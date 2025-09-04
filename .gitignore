@@ -20,3 +20,5 @@ assets/built/*.map
 # Optional caches
 .cache/
 .tmp/
+
+assets/*/!(*.css|*.min.css)
