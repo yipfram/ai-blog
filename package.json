@@ -1,6 +1,6 @@
 {
-    "name": "solo",
-    "description": "A Ghost theme",
+    "name": "ai-blog-theme",
+    "description": "A Ghost theme for yipfram's AI blog.",
     "version": "1.0.0",
     "private": true,
     "engines": {
@@ -8,6 +8,11 @@
     },
     "license": "MIT",
     "author": {
+        "name": "yipfram",
+        "email": "yipfram@rrchs.fr",
+        "url": "https://rrchs.fr"
+    },
+    "Originalauthor": {
         "name": "Ghost Foundation",
         "email": "hello@ghost.org",
         "url": "https://ghost.org"
@@ -93,6 +98,7 @@
         "autoprefixer": "10.4.21",
         "beeper": "2.1.0",
         "cssnano": "7.1.1",
+        "tailwindcss": "3.4.10",
         "gscan": "5.1.0",
         "gulp": "5.0.1",
         "gulp-concat": "2.6.1",
