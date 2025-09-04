@@ -1,4 +1,4 @@
-<article class="gh-card {{post_class}}"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
+<article class="gh-card {{post_class}} rounded-xl overflow-hidden"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
     <a class="gh-card-link" href="{{url}}">
 
         {{#match @custom.post_feed_layout "!=" "Typographic"}}
