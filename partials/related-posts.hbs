@@ -1,0 +1,25 @@
+<div class="bg-gray-500/10 backdrop-blur-sm rounded-3xl p-8 mx-auto max-w-7xl mt-16">
+    <section class="gh-canvas my-16">
+        <h2 class="text-3xl font-bold text-center mb-8">{{t "Related Posts"}}</h2>
+        
+        {{#get "posts" include="tags,authors" limit="3" filter="id:-{{id}}+tag:[{{primary_tag.slug}}]" as |related_posts|}}
+            {{#if related_posts}}
+                <div class="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 w-full mx-auto max-w-6xl justify-items-center">
+                    {{#foreach related_posts}}
+                        {{> "related-post-card"}}
+                    {{/foreach}}
+                </div>
+            {{else}}
+                {{!-- Fallback to recent posts if no related posts found --}}
+                {{#get "posts" filter="id:-{{id}}" limit="3" as |recent_posts|}}
+                    <h2 class="text-3xl font-bold text-center mb-4">{{t "Recent Posts"}}</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 w-full mx-auto max-w-6xl justify-items-center">
+                        {{#foreach recent_posts}}
+                            {{> "related-post-card"}}
+                        {{/foreach}}
+                    </div>
+                {{/get}}
+            {{/if}}
+        {{/get}}
+    </section>
+</div>
