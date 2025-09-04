@@ -6,7 +6,11 @@ module.exports = {
         'assets/js/**/*.js'
     ],
     theme: {
-        extend: {}
+        extend: {
+            colors: {
+                accent: '#3b82f6'
+            }
+        }
     },
     plugins: []
 };

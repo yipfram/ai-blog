@@ -1,56 +1,39 @@
 {{!< default}}
 
-<section class="gh-about gh-outer{{#match @custom.header_section_layout "!=" "Typographic profile"}}{{#unless @site.cover_image}} no-image{{/unless}}{{else}}{{#unless @site.icon}} no-image{{/unless}}{{/match}}">
-    <div class="gh-about-inner gh-inner rounded-xl overflow-hidden">
-        {{#match @custom.header_section_layout "!=" "Typographic profile"}}
-            {{#if @site.cover_image}}
-                <img class="gh-about-image" src="{{@site.cover_image}}" alt="{{@site.title}}">
-            {{/if}}
-        {{else}}
-            {{#if @site.icon}}
-                <img class="gh-about-image" src="{{@site.icon}}" alt="{{@site.title}}">
-            {{/if}}
-        {{/match}}
-        <script>
-            (function () {
-                if (!document.body.classList.contains('has-background-about')) return;
-
-                const about = document.querySelector('.gh-about');
-                if (!about) return;
-
-                const image = about.querySelector('.gh-about-image');
-
-                about.style.setProperty('--about-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
-                about.classList.add('initialized');
-            })();
-        </script>
-        <div class="gh-about-content">
-            <div class="gh-about-content-inner">
-                {{#if @custom.primary_header}}
-                    <h1 class="gh-about-primary">{{{t @custom.primary_header}}}</h1>
-                {{/if}}
-                {{#if @site.members_enabled}}
-                    {{#unless @member}}
-                        {{#if @custom.secondary_header}}
-                        <p class="gh-about-secondary">{{{t @custom.secondary_header}}}</p>
-                        {{/if}}
-                        <div class="gh-subscribe-input" data-portal>
-                            jamie@example.com
-                            <span class="gh-btn gh-primary-btn">{{t "Subscribe"}}</span>
-                        </div>
-                    {{/unless}}
-                {{/if}}
+<section class="relative flex flex-col justify-center md:items-center h-screen bg-cover bg-center text-white px-4 sm:px-6 lg:px-8" style="background-color: #171717;">
+    <div class="w-full max-w-7xl mx-auto pt-16 md:pt-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div class="text-center md:text-left -mt-16 md:mt-0">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white lg:text-8xl">
+                    <span class="block xl:inline">{{t "AI, Demystified."}}</span>
+                </h1>
+                <p class="mt-4 max-w-md mx-auto text-xl text-gray-300 md:mt-6 md:max-w-3xl">
+                    {{t "Your daily source for AI news, made easy for the tech-curious to understand."}}
+                </p>
             </div>
+            {{#get "posts" limit="1" include="tags,authors"}}
+                {{#foreach posts}}
+                <div class="bg-gray-800 bg-opacity-50 backdrop-blur-md rounded-lg p-8 shadow-lg border border-gray-700">
+                    <h2 class="text-xl font-semibold text-accent mb-3">{{t "Latest News"}}</h2>
+                    <h3 class="text-3xl font-bold text-white mb-4">{{title}}</h3>
+                    <p class="text-gray-400 mb-6 text-lg">
+                        {{excerpt words="35"}}
+                    </p>
+                    <a href="{{url}}" class="font-semibold text-accent hover:underline text-lg">{{t "Read More"}} &rarr;</a>
+                </div>
+                {{/foreach}}
+            {{/get}}
         </div>
     </div>
 </section>
 
 <main class="gh-main gh-outer">
     <div class="gh-feed gh-inner">
+        {{#get "posts" from="2"}}
         {{#foreach posts}}
             {{> "loop"}}
         {{/foreach}}
+        {{/get}}
     </div>
 </main>
 
-{{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}} has-side-about{{/match}}{{#match @custom.header_section_layout "Large background"}}{{#if @site.cover_image}} is-head-transparent has-background-about{{else}} has-side-about{{/if}}{{/match}}{{#match @custom.header_section_layout "Typographic profile"}}{{#if @site.icon}} has-typographic-about{{else}} has-side-about{{/if}}{{/match}}{{/contentFor}}
