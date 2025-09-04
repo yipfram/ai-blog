@@ -16,9 +16,12 @@ Thumbs.db
 # Ghost theme build artifacts
 # Keep built CSS/JS tracked, ignore sourcemaps
 assets/built/*.map
+assets/built/*/!(*.css|*.min.css)
+assets/built/*/!(*.js|*.min.js)
+assets/built/*/!(*.css.map|*.min.css.map)
+assets/built/*/!(*.js.map|*.min.js.map)
+assets/built/*/!(*.css.map|*.min.css.map)
 
 # Optional caches
 .cache/
 .tmp/
-
-assets/*/!(*.css|*.min.css)
