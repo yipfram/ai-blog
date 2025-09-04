@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /ghost/
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important assets
+Allow: /assets/
+Allow: /content/images/
+Allow: /public/
+
+# Sitemap location
+Sitemap: https://ai.rrchs.fr/sitemap.xml
+
+
+# Crawl delay (optional - adjust based on your server capacity)
+Crawl-delay: 1
