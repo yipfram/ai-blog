@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Production/distribution
+dist/
+
+yarn-error.log
+npm-debug.log*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Ghost theme build artifacts
+# Keep built CSS/JS tracked, ignore sourcemaps
+assets/built/*.map
+
+# Optional caches
+.cache/
+.tmp/
