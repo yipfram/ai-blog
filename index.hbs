@@ -27,16 +27,16 @@
         <div class="gh-about-content">
             <div class="gh-about-content-inner">
                 {{#if @custom.primary_header}}
-                    <h1 class="gh-about-primary">{{{@custom.primary_header}}}</h1>
+                    <h1 class="gh-about-primary">{{{t @custom.primary_header}}}</h1>
                 {{/if}}
                 {{#if @site.members_enabled}}
                     {{#unless @member}}
                         {{#if @custom.secondary_header}}
-                        <p class="gh-about-secondary">{{{@custom.secondary_header}}}</p>
+                        <p class="gh-about-secondary">{{{t @custom.secondary_header}}}</p>
                         {{/if}}
                         <div class="gh-subscribe-input" data-portal>
                             jamie@example.com
-                            <span class="gh-btn gh-primary-btn">Subscribe</span>
+                            <span class="gh-btn gh-primary-btn">{{t "Subscribe"}}</span>
                         </div>
                     {{/unless}}
                 {{/if}}
