@@ -66,4 +66,42 @@ pnpm zip         # Package theme for Ghost upload
 - **@tryghost/shared-theme-assets**: Provides base Ghost theme functionality
 - **jarallax**: For parallax scrolling effects on feed cards
 
+## Ghost Theme Development Reference
+
+**Official Documentation**: Always refer to the official Ghost theme docs at `/tryghost/docs` for best practices:
+
+**Key Ghost Helpers & APIs**:
+- `{{#get "posts"}}` - Fetch posts with filtering and pagination
+- `{{#get "newsletters"}}` - Access newsletter configurations
+- `{{#get "tiers"}}` - Fetch membership tiers and pricing
+- `data-members-form` - Built-in newsletter signup functionality
+- `data-members-email` - Email input for subscription forms
+- `data-members-newsletter` - Newsletter selection in forms
+- `{{@member}}` - Current member context and subscription status
+- `{{@site.members_enabled}}` - Check if memberships are enabled
+
+**Newsletter Integration**:
+```handlebars
+<form data-members-form="newsletter">
+  <input type="email" data-members-email required>
+  <button type="submit">Subscribe</button>
+</form>
+```
+
+**Membership Features**:
+- Use `{{#unless @member}}` for non-member content
+- `{{#if @site.members_enabled}}` to conditionally show member features
+- `data-portal="signin/signup"` for Ghost's built-in authentication
+
+**Template Hierarchy**: Follow Ghost's template fallback system:
+- Custom templates: `post-{slug}.hbs`, `page-{slug}.hbs`, `tag-{slug}.hbs`
+- General templates: `post.hbs`, `page.hbs`, `tag.hbs`, `author.hbs`
+- Fallback: `index.hbs` for all listing pages
+
+**Required Helpers**: Always include in templates:
+- `{{ghost_head}}` in `<head>`
+- `{{ghost_foot}}` before `</body>`
+- `{{body_class}}` on `<body>` tag
+- `{{post_class}}` on post containers
+
 When editing templates, always use Tailwind utilities and maintain the existing AI theme color palette. Increment version in `package.json` for significant changes (0.1 for minor, 1.0 for major).
