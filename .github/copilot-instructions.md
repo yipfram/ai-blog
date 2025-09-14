@@ -68,6 +68,12 @@ pnpm zip         # Package theme for Ghost upload
 
 ## Ghost Theme Development Reference
 
+**Documentation Strategy**: When working with Ghost themes, ALWAYS use Context7 to retrieve up-to-date documentation rather than guessing or relying on potentially outdated information. Use the Context7 MCP server to:
+- Get current Ghost theme documentation with `mcp_context7_resolve-library-id` followed by `mcp_context7_get-library-docs`
+- Search for specific Ghost APIs, helpers, or features
+- Verify syntax and implementation patterns before making changes
+- Ensure compatibility with the latest Ghost version
+
 **Official Documentation**: Always refer to the official Ghost theme docs at `/tryghost/docs` for best practices:
 
 **Key Ghost Helpers & APIs**:
