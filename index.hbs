@@ -27,6 +27,29 @@
     </div>
 </section>
 
+{{#if @site.members_enabled}}
+<section class="gh-newsletter-section gh-outer">
+    <div class="gh-newsletter-inner gh-inner">
+        <div class="gh-newsletter-content">
+            <h3 class="gh-newsletter-title">{{t "Stay updated"}}</h3>
+            <p class="gh-newsletter-description">{{t "Get the latest AI news delivered to your inbox"}}</p>
+            <form class="gh-newsletter-form" data-members-form="newsletter">
+                <div class="gh-newsletter-form-group">
+                    <input class="gh-newsletter-input" type="email" data-members-email placeholder="{{t "Enter your email"}}" required>
+                    <button class="gh-newsletter-btn" type="submit">{{t "Subscribe"}}</button>
+                </div>
+                <div class="gh-newsletter-success" data-members-success>
+                    <p>{{t "Thanks! Check your email for confirmation."}}</p>
+                </div>
+                <div class="gh-newsletter-error" data-members-error>
+                    <p>{{t "Something went wrong. Please try again."}}</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{{/if}}
+
 <main class="gh-main gh-outer">
     <div class="gh-feed gh-inner">
         {{#get "posts" from="2"}}

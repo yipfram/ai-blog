@@ -1226,3 +1226,143 @@ hr {
 .gh-copyright {
     font-size: 1.4rem;
 }
+
+/* Newsletter Section
+/* ---------------------------------------------------------- */
+
+.gh-newsletter-section {
+    padding: clamp(4rem, 2vw + 3rem, 6rem) 0;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.gh-newsletter-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gh-newsletter-content {
+    padding: 0 2rem;
+}
+
+.gh-newsletter-title {
+    font-size: clamp(2.4rem, 1.5vw + 2rem, 3.2rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-primary-text);
+}
+
+.gh-newsletter-description {
+    font-size: 1.8rem;
+    color: var(--color-secondary-text);
+    margin-bottom: 3rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gh-newsletter-form {
+    position: relative;
+}
+
+.gh-newsletter-form-group {
+    display: flex;
+    gap: 1rem;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.gh-newsletter-input {
+    flex: 1;
+    padding: 1.4rem 1.8rem;
+    font-size: 1.6rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-primary-text);
+    transition: all 0.2s ease;
+}
+
+.gh-newsletter-input:focus {
+    outline: none;
+    border-color: var(--ghost-accent-color, #15171a);
+    box-shadow: 0 0 0 2px rgba(var(--ghost-accent-color-rgb, 21, 23, 26), 0.1);
+}
+
+.gh-newsletter-input::placeholder {
+    color: var(--color-secondary-text);
+}
+
+.gh-newsletter-btn {
+    padding: 1.4rem 2.4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    background: var(--ghost-accent-color, #15171a);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.gh-newsletter-btn:hover {
+    background: color-mix(in srgb, var(--ghost-accent-color, #15171a) 85%, black);
+    transform: translateY(-1px);
+}
+
+.gh-newsletter-btn:active {
+    transform: translateY(0);
+}
+
+.gh-newsletter-success,
+.gh-newsletter-error {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.gh-newsletter-success {
+    color: #059669;
+    background: rgba(5, 150, 105, 0.1);
+    border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+.gh-newsletter-error {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.1);
+    border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.gh-newsletter-success.show,
+.gh-newsletter-error.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .gh-newsletter-form-group {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    
+    .gh-newsletter-btn {
+        padding: 1.6rem 2.4rem;
+    }
+    
+    .gh-newsletter-content {
+        padding: 0 1.5rem;
+    }
+}
