@@ -1,7 +1,7 @@
 {
     "name": "ai-blog-theme",
     "description": "A Ghost theme for yipfram's AI blog.",
-    "version": "1.3.3",
+    "version": "1.3.4",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
@@ -53,12 +53,20 @@
             },
             "navigation_layout": {
                 "type": "select",
-                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+                "options": [
+                    "Logo on the left",
+                    "Logo in the middle",
+                    "Stacked"
+                ],
                 "default": "Logo on the left"
             },
             "typography": {
                 "type": "select",
-                "options": ["Modern sans-serif", "Elegant serif", "Consistent mono"],
+                "options": [
+                    "Modern sans-serif",
+                    "Elegant serif",
+                    "Consistent mono"
+                ],
                 "default": "Modern sans-serif"
             },
             "footer_text": {
@@ -66,7 +74,11 @@
             },
             "post_feed_layout": {
                 "type": "select",
-                "options": ["Classic", "Typographic", "Parallax"],
+                "options": [
+                    "Classic",
+                    "Typographic",
+                    "Parallax"
+                ],
                 "default": "Classic",
                 "group": "homepage"
             }
