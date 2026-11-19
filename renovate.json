@@ -6,13 +6,13 @@
     ":semanticCommitsDisabled"
   ],
   "timezone": "Europe/Paris",
-  "schedule": ["before 6am on monday"],
+  "schedule": ["* 0-5 1-7,15-21 * 1"],
   "rangeStrategy": "pin",
   "prConcurrentLimit": 5,
   "labels": ["dependencies"],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 6am on the first day of the month"]
+    "schedule": ["* 0-5 1-7,15-21 * 1"]
   },
   "packageRules": [
     {
@@ -20,6 +20,12 @@
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "devDependencies (non-major)"
+    },
+    {
+      "description": "Automerge des mises à jour non-majeures si la CI passe",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest", "lockFileMaintenance"],
+      "automerge": true,
+      "automergeType": "branch"
     },
     {
       "description": "Regrouper les GitHub Actions",

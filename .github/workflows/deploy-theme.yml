@@ -4,11 +4,37 @@ on:
     branches:
       - master
       - main
+permissions:
+  contents: write
+concurrency:
+  group: deploy-theme
+  cancel-in-progress: false
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Bump patch version
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          current=$(node -p "require('./package.json').version")
+          previous=""
+          if [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ]; then
+            previous=$(git show "$BEFORE:package.json" | node -p "JSON.parse(require('fs').readFileSync(0)).version")
+          fi
+          if [ -n "$previous" ] && [ "$current" != "$previous" ]; then
+            echo "Version already bumped manually ($previous -> $current), skipping."
+            exit 0
+          fi
+          npm version patch --no-git-tag-version
+          new=$(node -p "require('./package.json').version")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Increment version to $new [skip ci]"
+          git push origin HEAD:${{ github.ref_name }}
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1.6.6
         with:
