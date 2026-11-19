@@ -5,6 +5,7 @@
     ":dependencyDashboard",
     ":semanticCommitsDisabled"
   ],
+  "forkProcessing": "enabled",
   "timezone": "Europe/Paris",
   "schedule": ["* 0-5 1-7,15-21 * 1"],
   "rangeStrategy": "pin",
