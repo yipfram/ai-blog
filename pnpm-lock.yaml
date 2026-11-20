@@ -39,8 +39,8 @@ importers:
         specifier: 3.0.2
         version: 3.0.2
       gulp-zip:
-        specifier: 5.1.0
-        version: 5.1.0(gulp@5.0.1)
+        specifier: 6.1.0
+        version: 6.1.0(gulp@5.0.1)
       ordered-read-streams:
         specifier: 2.0.0
         version: 2.0.0
@@ -476,6 +476,9 @@ packages:
   '@types/connect@3.4.38':
     resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
 
+  '@types/expect@1.20.4':
+    resolution: {integrity: sha512-Q5Vn3yjTDyCMV50TB6VRIbQNxSE4OmZR86VSbGaNpfUolm0iePBB4KdEEHmxoY5sT2+2DIvXW0rvMDP2nHZ4Mg==}
+
   '@types/http-cache-semantics@4.2.0':
     resolution: {integrity: sha512-L3LgimLHXtGkWikKnsPg0/VFx9OGZaC+eN1u4r+OB1XRqH3meBIAVC2zr1WdMH+RHmnRkqliQAOHNJ/E0j/e0Q==}
 
@@ -496,6 +499,9 @@ packages:
 
   '@types/tedious@4.0.14':
     resolution: {integrity: sha512-KHPsfX/FoVbUGbyYvk1q9MMQHLPeRZhRJZdO45Q4YjvFkv4hMNghCWTvy7rdKessBsmtz4euWCWAB6/tVpI1Iw==}
+
+  '@types/vinyl@2.0.12':
+    resolution: {integrity: sha512-Sr2fYMBUVGYq8kj3UthXFAu5UN6ZW+rYr4NACjZQJvHvj+c8lYv0CahmZ2P/r7iUkN44gGUBwqxZkrKXYPb7cw==}
 
   '@types/yauzl@2.10.3':
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
@@ -577,14 +583,6 @@ packages:
 
   arg@5.0.2:
     resolution: {integrity: sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==}
-
-  arr-diff@4.0.0:
-    resolution: {integrity: sha512-YVIQ82gZPGBebQV/a8dar4AitzCQs0jjXwMPZllpXMaGjXPYVUawSxQrRsjhjupyVxEvbHgUmIhKVlND+j02kA==}
-    engines: {node: '>=0.10.0'}
-
-  arr-union@3.1.0:
-    resolution: {integrity: sha512-sKpyeERZ02v1FeCZT8lrfJq5u6goHCtpTAzPwJYe7c8SPFOboNjNg1vz2L4VTn9T4PQxEx13TbXLmYUcS6Ug7Q==}
-    engines: {node: '>=0.10.0'}
 
   array-each@1.0.1:
     resolution: {integrity: sha512-zHjL5SZa68hkKHBFBK6DJCTtr9sfTCPCaph/L7tMSLcTFgy+zX7E+6q5UArbtOtMBCtxdICpfTCspRse+ywyXA==}
@@ -1081,6 +1079,10 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
+  easy-transform-stream@1.0.1:
+    resolution: {integrity: sha512-ktkaa6XR7COAR3oj02CF3IOgz2m1hCaY3SfzvKT4Svt2MhHw9XCt+ncJNWfe2TGz31iqzNGZ8spdKQflj+Rlog==}
+    engines: {node: '>=14.16'}
+
   ecc-jsbn@0.1.2:
     resolution: {integrity: sha512-eh9O+hwRHNbG4BLTjEl3nw044CkGm5X6LoaCf7LPp7UU8Qrt47JYNi6nPX8xjW97TKGKm1ouctg0QSpZe9qrnw==}
 
@@ -1414,6 +1416,10 @@ packages:
     resolution: {integrity: sha512-InmaR50Xl1xB1WdEk4mrUgGHv3VhhlRLrx7u60iY5AAer90FlK95KXitPcGGQoi28zrUJM189d/h6+V470Ncgg==}
     engines: {node: '>=6'}
 
+  gulp-plugin-extras@1.1.0:
+    resolution: {integrity: sha512-T0AXOEVoKYzLIBlwEZ7LtAx2w4ExIozIoxVeYEVLFbdxI7i0sWvFDq0F8mm47djixDF3vAqDPoyGwh3Sg/PWtQ==}
+    engines: {node: '>=18'}
+
   gulp-postcss@10.0.0:
     resolution: {integrity: sha512-z1RF2RJEX/BvFsKN11PXai8lRmihZTiHnlJf7Zu8uHaA/Q7Om4IeN8z1NtMAW5OiLwUY02H0DIFl9tHl0CNSgA==}
     engines: {node: '>=18'}
@@ -1423,9 +1429,9 @@ packages:
   gulp-uglify@3.0.2:
     resolution: {integrity: sha512-gk1dhB74AkV2kzqPMQBLA3jPoIAPd/nlNzP2XMDSG8XZrqnlCiDGAqC+rZOumzFvB5zOphlFh6yr3lgcAb/OOg==}
 
-  gulp-zip@5.1.0:
-    resolution: {integrity: sha512-XZr/y91IliK/SpR74g3TkZejGkGEmK7CSDjSghT1jXshgO+dFvpLIz9w9fpuwkew6i7k4F+G24TubNgq1ISzEw==}
-    engines: {node: '>=8'}
+  gulp-zip@6.1.0:
+    resolution: {integrity: sha512-couiqfO4CSM4q3oKnihLhYq5mVmwyXfgLP/0eeM7oVlN+psn45vfvJHcCL3AkPgTi4NojnUFV2IozYqZClIujQ==}
+    engines: {node: '>=18'}
     peerDependencies:
       gulp: '>=4'
     peerDependenciesMeta:
@@ -2011,10 +2017,6 @@ packages:
   pirates@4.0.7:
     resolution: {integrity: sha512-TfySrs/5nm8fQJDcBDuUng3VOUKsd7S+zqvbOTiGXHfxX4wK31ard+hoNuvkicM/2YFzlpDgABOevKSsB4G/FA==}
     engines: {node: '>= 6'}
-
-  plugin-error@1.0.1:
-    resolution: {integrity: sha512-L1zP0dk7vGweZME2i+EeakvUNqSrdiI3F91TwEoYiGrAfUXmVv6fJIq4g82PAXxNsWOp0J7ZqQy/3Szz0ajTxA==}
-    engines: {node: '>= 0.10'}
 
   plugin-error@2.0.1:
     resolution: {integrity: sha512-zMakqvIDyY40xHOvzXka0kUvf40nYIuwRE8dWhti2WtjQZ31xAgBZBhxsK7vK3QbRXS1Xms/LO7B5cuAsfB2Gg==}
@@ -2630,9 +2632,6 @@ packages:
   through2@2.0.5:
     resolution: {integrity: sha512-/mrRod8xqpA+IHSLyGCQ2s8SPHiCDEeQJSep1jqLYeEUClOFG2Qsh+4FU6G9VeqpZnGW/Su8LQGc4YKni5rYSQ==}
 
-  through2@3.0.2:
-    resolution: {integrity: sha512-enaDQ4MUyP2W6ZyT6EsMzqBPZaM/avg8iuo+l2d3QCs0J+6RaqkHV/2/lOwDTueBHeJ/2LG9lrLW3d5rWPucuQ==}
-
   time-stamp@1.1.0:
     resolution: {integrity: sha512-gLCeArryy2yNTRzTGKbZbloctj64jkZ57hj5zdraXue6aFgd6PmvVtEyiUU+hvU0v7q08oVv8r8ev0tRo6bvgw==}
     engines: {node: '>=0.10.0'}
@@ -2840,8 +2839,8 @@ packages:
   yauzl@2.10.0:
     resolution: {integrity: sha512-p4a9I6X6nu6IhoGmBqAcbJy1mlC4j27vEPZX9F4L4/vZT3Lyq1VkFHw/V/PUcB9Buo+DG3iHkT0x3Qya58zc3g==}
 
-  yazl@2.5.1:
-    resolution: {integrity: sha512-phENi2PLiHnHb6QBVot+dJnaAZ0xosj7p3fWl+znIjBDlnMI2PsZCJZ306BPTFOaHf5qdDEI8x5qFrSOBN5vrw==}
+  yazl@3.3.1:
+    resolution: {integrity: sha512-BbETDVWG+VcMUle37k5Fqp//7SDOK2/1+T7X8TD96M3D9G8jK5VLUdQVdVjGi8im7FGkazX7kk5hkU8X4L5Bng==}
 
   yoctodelay@1.2.0:
     resolution: {integrity: sha512-12y/P9MSig9/5BEhBgylss+fkHiCRZCvYR81eH35NW9uw801cvJt31EAV+WOLcwZRZbLiIQl/hxcdXXXFmGvXg==}
@@ -3436,6 +3435,8 @@ snapshots:
     dependencies:
       '@types/node': 26.6.6
 
+  '@types/expect@1.20.4': {}
+
   '@types/http-cache-semantics@4.2.0': {}
 
   '@types/mysql@2.15.27':
@@ -3462,6 +3463,11 @@ snapshots:
 
   '@types/tedious@4.0.14':
     dependencies:
+      '@types/node': 26.6.6
+
+  '@types/vinyl@2.0.12':
+    dependencies:
+      '@types/expect': 1.20.4
       '@types/node': 26.6.6
 
   '@types/yauzl@2.10.3':
@@ -3556,10 +3562,6 @@ snapshots:
       - react-native-b4a
 
   arg@5.0.2: {}
-
-  arr-diff@4.0.0: {}
-
-  arr-union@3.1.0: {}
 
   array-each@1.0.1: {}
 
@@ -4065,6 +4067,8 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
+  easy-transform-stream@1.0.1: {}
+
   ecc-jsbn@0.1.2:
     dependencies:
       jsbn: 0.1.1
@@ -4516,6 +4520,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  gulp-plugin-extras@1.1.0:
+    dependencies:
+      '@types/vinyl': 2.0.12
+      chalk: 5.6.2
+      easy-transform-stream: 1.0.1
+
   gulp-postcss@10.0.0(jiti@1.21.7)(postcss@8.5.33):
     dependencies:
       fancy-log: 2.0.0
@@ -4540,15 +4550,17 @@ snapshots:
       uglify-js: 3.19.3
       vinyl-sourcemaps-apply: 0.2.1
 
-  gulp-zip@5.1.0(gulp@5.0.1):
+  gulp-zip@6.1.0(gulp@5.0.1):
     dependencies:
-      get-stream: 5.2.0
-      plugin-error: 1.0.1
-      through2: 3.0.2
-      vinyl: 2.2.1
-      yazl: 2.5.1
+      get-stream: 9.0.1
+      gulp-plugin-extras: 1.1.0
+      vinyl: 3.0.1
+      yazl: 3.3.1
     optionalDependencies:
       gulp: 5.0.1
+    transitivePeerDependencies:
+      - bare-abort-controller
+      - react-native-b4a
 
   gulp@5.0.1:
     dependencies:
@@ -5048,13 +5060,6 @@ snapshots:
   pinkie@2.0.4: {}
 
   pirates@4.0.7: {}
-
-  plugin-error@1.0.1:
-    dependencies:
-      ansi-colors: 1.1.0
-      arr-diff: 4.0.0
-      arr-union: 3.1.0
-      extend-shallow: 3.0.2
 
   plugin-error@2.0.1:
     dependencies:
@@ -5733,11 +5738,6 @@ snapshots:
       readable-stream: 2.3.8
       xtend: 4.0.2
 
-  through2@3.0.2:
-    dependencies:
-      inherits: 2.0.4
-      readable-stream: 3.6.2
-
   time-stamp@1.1.0: {}
 
   tiny-lr@1.1.1(supports-color@7.2.0):
@@ -5972,9 +5972,9 @@ snapshots:
       buffer-crc32: 0.2.13
       fd-slicer: 1.1.0
 
-  yazl@2.5.1:
+  yazl@3.3.1:
     dependencies:
-      buffer-crc32: 0.2.13
+      buffer-crc32: 1.0.0
 
   yoctodelay@1.2.0: {}
 
