@@ -1,7 +1,7 @@
 {
     "name": "ai-blog-theme",
     "description": "A Ghost theme for yipfram's AI blog.",
-    "version": "1.3.19",
+    "version": "1.3.20",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
