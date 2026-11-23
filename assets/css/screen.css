@@ -382,6 +382,7 @@ hr {
 
 .gh-head {
     font-size: 1.6rem;
+    background-color: transparent;
 }
 
 .gh-head-logo {
