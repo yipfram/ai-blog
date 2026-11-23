@@ -46,9 +46,9 @@ jobs:
       - name: Check theme with gscan
         run: pnpm test
 
-      - name: Commit version bump and built assets
+      - name: Commit version bump
         run: |
-          git add package.json assets/built
+          git add package.json
           if git diff --cached --quiet; then
             echo "Nothing to commit."
             exit 0
