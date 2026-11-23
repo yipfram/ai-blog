@@ -15,7 +15,7 @@ const zip = require('gulp-zip').default;
 const easyimport = require('postcss-easy-import');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const tailwindcss = require('tailwindcss');
+const tailwindcss = require('@tailwindcss/postcss');
 
 function serve(done) {
     livereload.listen();
