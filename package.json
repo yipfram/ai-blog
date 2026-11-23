@@ -109,5 +109,5 @@
         "pump": "3.0.4",
         "tailwindcss": "4.3.5"
     },
-    "packageManager": "pnpm@12.15.0"
+    "packageManager": "pnpm@12.23.0"
 }
