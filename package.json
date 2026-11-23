@@ -92,6 +92,7 @@
     "devDependencies": {
         "@tailwindcss/postcss": "4.3.5",
         "@tryghost/shared-theme-assets": "2.7.5",
+        "@tryghost/theme-translations": "0.0.22",
         "autoprefixer": "10.7.0",
         "beeper": "3.0.0",
         "cssnano": "9.9.0",

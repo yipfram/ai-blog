@@ -172,6 +172,9 @@ importers:
       '@tryghost/shared-theme-assets':
         specifier: 2.7.5
         version: 2.7.5
+      '@tryghost/theme-translations':
+        specifier: 0.0.22
+        version: 0.0.22
       autoprefixer:
         specifier: 10.7.0
         version: 10.7.0(postcss@8.5.33)
@@ -375,6 +378,9 @@ packages:
 
   '@tryghost/shared-theme-assets@2.7.5':
     resolution: {integrity: sha512-v8IrV6V42J7sM1DWO56L1ktbCIzrhfm5ifNOn+YgCOVcK5iiJ2GcznoAcgssq2mAivbxQ3MDdjAvirRnfSu8FQ==}
+
+  '@tryghost/theme-translations@0.0.22':
+    resolution: {integrity: sha512-mOF0cNyxhxVkPAcfgNes5hkmoEafr+WucKxKOP0cnmHnKHOvVPltSZ0psgBphD7owROjK1e/zT9qTtLKf7AWHg==}
 
   '@tryghost/zip@4.1.0':
     resolution: {integrity: sha512-i+Vhe4Ay2LSziyZxx8Pj4X/J55XBzCU2A17/y5Vcq6jp2j+34ug/8VBitpsdndVI6Rd8cjfwwMv7owFqhGXhXw==}
@@ -1875,6 +1881,8 @@ snapshots:
       find-root: 1.1.0
 
   '@tryghost/shared-theme-assets@2.7.5': {}
+
+  '@tryghost/theme-translations@0.0.22': {}
 
   '@tryghost/zip@4.1.0(bare-buffer@3.7.3)':
     dependencies:
